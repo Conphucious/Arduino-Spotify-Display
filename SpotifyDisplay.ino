@@ -1,12 +1,15 @@
 #include <ESP8266WiFi.h>
+#include <ESP8266WebServer.h>
+#include <Credentials.h>
 
 //#define LED D0 // Led in NodeMCU at pin GPIO16 (D0).
 
 #define ledPin D0
 
-const char* ssid = "";
-const char* password = "";
-WiFiServer server(80);
+// WIFI SoftAP Settings
+#define SOFTAP_SSID NodeMCU_ESP8266
+#define SOFTAP_PWD goodluck
+ESP8266WebServer softApServer(80);
 
 void setup() {
   pinMode(ledPin, OUTPUT); // LED pin as output.
