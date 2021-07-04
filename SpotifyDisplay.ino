@@ -4,8 +4,8 @@
 
 #define ledPin D0
 
-const char* ssid = "Broadstone_14308";
-const char* password = "k4afvRer";
+const char* ssid = "";
+const char* password = "";
 WiFiServer server(80);
 
 void setup() {
